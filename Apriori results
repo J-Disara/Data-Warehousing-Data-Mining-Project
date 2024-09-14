@@ -1,0 +1,62 @@
+=== Run information ===
+
+Scheme:       weka.associations.Apriori -N 10 -T 0 -C 0.6 -D 0.05 -U 1.0 -M 0.1 -S -1.0 -c -1
+Relation:     Factors_ Affecting_ University_Student_Grades_Dataset-weka.filters.unsupervised.attribute.ReplaceMissingValues-weka.filters.unsupervised.attribute.InterquartileRange-Rfirst-last-O3.0-E6.0-weka.filters.unsupervised.attribute.ReplaceMissingValues-weka.filters.unsupervised.attribute.Remove-R28-29-weka.filters.unsupervised.instance.RemoveDuplicates-weka.filters.unsupervised.attribute.Discretize-B2-M-1.0-R1-precision6-weka.filters.unsupervised.attribute.Discretize-B5-M-1.0-R4-precision6-weka.filters.unsupervised.attribute.Discretize-B3-M-1.0-R5-precision6-weka.filters.unsupervised.attribute.Discretize-B8-M-1.0-R15-precision6-weka.filters.unsupervised.attribute.Discretize-B2-M-1.0-R17-precision6-weka.filters.unsupervised.attribute.Discretize-B2-M-1.0-R20-precision6
+Instances:    5000
+Attributes:   27
+              Age
+              Gender
+              Previous_Grade
+              Attendance
+              Study_Hours_PerWeek 
+              Major
+              Uni_Type
+              Financial_Status
+              Parental_Involvement
+              Educational_Resources
+              Motivation
+              Stress_Levels
+              Uni_Environment
+              Professor_Quality
+              Class_Size
+              Extracurricular_Activities
+              Sleep_Hours_PerDay
+              Nutrition
+              Physical_Activities
+              Screen_Time_PerDay
+              Educational_Tech_Use
+              Bullying
+              Learning_Style
+              Tutoring
+              Mentoring
+              Lack_of_Interest
+              Grade
+=== Associator model (full training set) ===
+
+
+Apriori
+=======
+
+Minimum support: 0.3 (1500 instances)
+Minimum metric <confidence>: 0.6
+Number of cycles performed: 14
+
+Generated sets of large itemsets:
+
+Size of set of large itemsets L(1): 44
+
+Size of set of large itemsets L(2): 39
+
+Best rules found:
+
+ 1. Educational_Tech_Use=No 2745 ==> Age='(-inf-20]' 1797    <conf:(0.65)> lift:(1.02) lev:(0.01) [39] conv:(1.04)
+ 2. Gender=M 2758 ==> Age='(-inf-20]' 1786    <conf:(0.65)> lift:(1.01) lev:(0) [19] conv:(1.02)
+ 3. Educational_Resources=Yes 2774 ==> Age='(-inf-20]' 1790    <conf:(0.65)> lift:(1.01) lev:(0) [13] conv:(1.01)
+ 4. Mentoring=No 2732 ==> Age='(-inf-20]' 1759    <conf:(0.64)> lift:(1.01) lev:(0) [9] conv:(1.01)
+ 5. Screen_Time_PerDay='(6-inf)' 2499 ==> Age='(-inf-20]' 1608    <conf:(0.64)> lift:(1) lev:(0) [7] conv:(1.01)
+ 6. Extracurricular_Activities=No 2726 ==> Age='(-inf-20]' 1747    <conf:(0.64)> lift:(1) lev:(0) [1] conv:(1)
+ 7. Uni_Type=Private 2734 ==> Age='(-inf-20]' 1752    <conf:(0.64)> lift:(1) lev:(0) [1] conv:(1)
+ 8. Tutoring=Yes 2758 ==> Age='(-inf-20]' 1767    <conf:(0.64)> lift:(1) lev:(0) [0] conv:(1)
+ 9. Screen_Time_PerDay='(-inf-6]' 2501 ==> Age='(-inf-20]' 1594    <conf:(0.64)> lift:(1) lev:(-0) [-7] conv:(0.99)
+10. Bullying=Yes 2823 ==> Age='(-inf-20]' 1796    <conf:(0.64)> lift:(0.99) lev:(-0) [-11] conv:(0.99)
+
